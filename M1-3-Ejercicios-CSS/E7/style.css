@@ -6,6 +6,8 @@
 body {
     margin: 16px auto;
     color: white;
+    background-color: rgb(255, 89, 80);
+    max-width: 100%;
 }
 
 p {
@@ -20,21 +22,16 @@ h2 {
     margin-bottom: 0;
 }
 
-body {
-    background-color: rgb(255, 89, 80);
-    max-width: 100%;
-}
-
-    #contenido, #recomendaciones {
+#contenido, #recomendaciones {
     margin: 16px;
 }
 
-    #recomendaciones :first-child {
+#recomendaciones :first-child {
     margin-bottom: 8px;
     margin-top: 24px;
 }
 
-    #recomendacion-1 h3 { 
+#recomendacion-1 h3 { 
     margin-top: 0 !important;
 }
 
@@ -55,7 +52,7 @@ body {
         background-color: rgb(172, 238, 238);
         border-radius: 20px;
         padding: 16px;
-        width: 50%;
+        width: 30%;
         margin: 0 auto;
         color: black;
 
@@ -78,6 +75,7 @@ body {
 
     #recomendaciones { 
         background-color: rgb(238, 232, 172);
+        width: 15%;
 
     }
 
