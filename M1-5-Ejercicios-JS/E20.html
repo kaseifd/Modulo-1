@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1-5-Ejercicio 19</title>
+</head>
+<body>
+    <script>
+
+        let totalMinutes = window.prompt("Escribe los minutos")
+
+        let years = totalMinutes / (365 * 24 * 60)
+        console.log(years)
+
+        parteDecimalYears = years - parseInt(years) 
+        console.log(parteDecimalYears)
+
+        let days = parseInt(parteDecimalYears * 24) 
+        console.log(days)
+        
+
+        alert(`Años: ${parseInt(years) }, Días: ${parseInt(days)}`)
+
+    </script>
+</body>
+</html>

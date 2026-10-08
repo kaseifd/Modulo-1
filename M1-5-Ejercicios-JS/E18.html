@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1-5-Ejercicio 18</title>
+</head>
+<body>
+    <script>
+        let totalSeconds = parseInt(window.prompt("Introduce los segundos:"))
+        let remainSecs = totalSeconds % 3600
+        let hours =  (totalSeconds - remainSecs)/ 3600
+        let seconds = remainSecs % 60
+        let minutes = (remainSecs - seconds)/60
+
+        alert(`${hours}:${minutes}:${seconds}`)
+
+    </script>
+</body>
+</html>
