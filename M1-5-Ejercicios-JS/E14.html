@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1-5-Ejercicio 14</title>
+</head>
+
+<body>
+    <script>
+        let distance = parseInt(window.prompt("Introduce una distancia en metros:"))
+        let hours = parseInt(window.prompt("¿Cuántas horas has tardado?:"))
+        let minutes = parseInt(window.prompt("¿Cuántos minutos has tardado?:"))
+        let seconds = parseInt(window.prompt("¿Cuántos segundos has tardado?:"))
+
+        let hoursToSeconds = hours * 3600
+        let minutesToSeconds = minutes + 60
+
+
+        let totalSeconds = seconds + hoursToSeconds + minutesToSeconds
+
+        let secondsToHours = seconds / 3600
+        let minutesToHours = minutes / 60
+        let totalHours = hours + secondsToHours + minutesToHours
+
+        let vKm = distance / totalHours
+        let vM = distance / totalSeconds
+    
+        alert(`La velocidad es: ${vM.toFixed(2)}m/s o ${vKm.toFixed(2)}km/h.`)
+    </script>
+</body>
+
+</html>
