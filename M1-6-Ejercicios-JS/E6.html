@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1-6-Ejercicio 6</title>
+</head>
+
+<body>
+    <script>
+        let word = prompt("Introduce una palabra:")
+        let wordLowercase = word.toLowerCase()
+        let halfWordNumber = parseInt(wordLowercase.length/2)
+
+        let halfWord = wordLowercase.substring(0, halfWordNumber)
+        console.log(halfWord)
+ 
+        let halfWordUppercase = halfWord.toUpperCase() 
+        console.log(halfWordUppercase)
+
+        let finalWord = wordLowercase.replace(halfWord, halfWordUppercase)
+
+        console.log(finalWord)
+    </script>
+</body>
+
+</html>
