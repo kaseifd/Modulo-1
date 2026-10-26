@@ -657,52 +657,130 @@
 // }
 
 
-// Ejercicio 27 *
+// Ejercicio 27
 
+// let firstChoice = prompt(`
+//     La Puerta Misteriosa
+    
+//     Estás caminando por un bosque oscuro y de pronto encuentras una antigua cabaña de madera. La puerta está medio abierta y sale una luz tenue de su interior. El viento aúlla entre los árboles.
 
+//     ¿Qué decides hacer? (Escribe solo la letra)
+//     • Opción A: Entrar sigilosamente a la cabaña para ver de dónde viene la luz. 
+//     • Opción B: Rodear la casa y mirar por la ventana antes de hacer nada.
+//     • Opción C: Ignorar la cabaña y seguir tu camino por el sendero del bosque.
 
+//     `).toLowerCase()
 
+// if (firstChoice == "a") {
+//     let choiceA = prompt(`
+//         Entras a la cabaña
+        
+//         Das un paso dentro y la puerta se cierra de golpe tras de ti. En el centro de la habitación hay una mesa con un libro antiguo que flota levemente y brilla con un tono azulado.
 
+//         ¿Qué decides hacer? (Escribe solo la letra)
+//         • Opción A: Abrir el libro y leer el primer hechizo en voz alta. 
+//         • Opción B: Buscar otra salida en las paredes de la cabaña sin tocar el libro.
+//         `).toLowerCase()
 
+//     if (choiceA == "a") {
+//         let finalAA = alert("El libro desata una ráfaga de viento que te transporta a un reino mágico. ¡Te has convertido en aprendiz de mago!")
 
+//     } else {
+//         let finalAB = alert("Encuentras una trampilla en el suelo. Escapas por un túnel subterráneo que te lleva directo y a salvo a tu casa.")
+//     }
+// }
 
+// if (firstChoice == "b") {
+//     let choiceB = prompt(`
+//         Miras por la ventana
+        
+//         Te asomas con cuidado por el cristal sucio. Ves a un anciano preparando un té humeante que te sonríe directamente, como si supiera que estabas ahí desde el principio. Te hace señas para que entres.    
+        
+//         ¿Cómo reaccionas? (Escribe solo la letra)
+//         • Opción A: Entrar con confianza y aceptar una taza de té. 
+//         • Opción B: Salir corriendo hacia el bosque, asustado por su mirada.
+//         `).toLowerCase()
+    
+//         if (choiceB == "a") {
+//             let finalBA = alert("El té era una poción de vitalidad. El anciano te regala un amuleto y te enseña el camino seguro para salir del bosque.")
 
+//         } else {
+//             let finalBB = alert("Tropiezas con una raíz en la oscuridad y pasas la noche al raso, lamentando haber rechazado la hospitalidad del anciano.")
+//         }
+// }
 
+// if (firstChoice == "c") {
+//     let choiceC = prompt(`
+//         Sigues tu camino
+        
+//         Decides que es mejor no arriesgarte. Aceleras el paso, pero la niebla se vuelve tan espesa que pierdes el rastro del sendero. De repente, escuchas un crujido de ramas rotas justo detrás de ti.
+        
+//         ¿Qué haces ante el peligro? (Escribe solo la letra)
+//         • Opción A: Esconderte detrás de un árbol grueso y aguantar la respiración. 
+//         • Opción B: Correr a ciegas a través de la niebla.
+//         `).toLowerCase()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//     if (choiceC == "a") {
+//         let finalCA = alert("Una silueta pasa de largo; era solo un ciervo asustado. Te tranquilizas y encuentras el camino de vuelta al amanecer.")
+        
+//     } else {
+//         let finalCB = alert("Caes por un pequeño barranco. No te haces daño, pero te quedas completamente perdido hasta que los rescatistas te encuentran.")
+//     }
+// }
 
 
 
 
 
 // OPERADORES LÓGICOS Y CONDICIONALES TERCIARIOS
+
+// Ejercicio 1
+
+// let bigBrotherAge = parseInt(prompt("¿Cuál es la edad de tu hijo mayor?"))
+// let ageGap = parseInt(prompt("¿Cuál es la diferencia de edad con tu hijo menor?"))
+
+// let is18 = bigBrotherAge - ageGap >= 18 ? true : false
+
+// if (is18) {
+//     alert("Tu hijo menor es mayor de edad")
+
+// } else {
+//         alert("Tu hijo menor es menor de edad")
+// }
+
+
+
+// Ejercicio 2
+
+// let sentence = prompt("Introduce una frase:").toLowerCase()
+
+// sentence.includes("r") ? alert("La frase contiene la r") : alert("No hay ninguna r")
+
+
+
+//Ejercicio 3
+
+// let number = prompt("Intrduce un número entero (positivo o negativo)")
+
+// number.includes("-") ? alert(number.substring(1, number.length)) : alert(number)
+
+
+
+// Ejercicio 4
+
+// let password = prompt("Introduce tu contraseña")
+
+// password.length >= 8 ? alert("Contraseña correcta") : alert ("Contraseña incorrecta")
+
+
+
+// Ejercicio 5
+
+// let age = prompt("Introduce tu edad:")
+
+// age <= 8 ? alert("Pasa al tobogán") : alert("Eres demasiado mayor para usar el tobogán")
+
+
 
 // Ejercicio 6
 
