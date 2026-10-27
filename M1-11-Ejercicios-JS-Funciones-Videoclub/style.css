@@ -1,0 +1,47 @@
+* {
+    border: red 1px solid;
+}
+#catalogue {
+
+
+}
+
+
+#catalogue h1 {
+
+}
+
+#card-container {
+    display: flex;
+    gap: 16px;
+
+}
+
+.film-card{
+    background-color: rgb(225, 225, 225);
+    border-radius: 8px;
+    padding: 32px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+.film-cartel {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+
+}
+
+.film-title {
+    font-family: sans-serif;
+
+}
+
+.film-synopsis {
+    font-family: sans-serif;
+
+}
