@@ -44,22 +44,25 @@ let contenedorHTML = document.getElementById("ejercicios-bucles")
 
 
 
-// Ejercicio 5 ****Revisar porque lo han entendido mal
+// Ejercicio 5 
 
-let value = Infinity
+// let value = Infinity
 
-while (value !== 0) {
-    value = parseInt(prompt(`Introduce un número:`))
-    let suma = 0
+// while (value !== 0) {
+//     value = parseInt(prompt(`Introduce un número:`))
+//     let suma = 0
 
-    for (let i = 1; i <= value; i++) {
-        suma += i
-    }
+//     for (let i = 1; i <= value; i++) {
+//         suma += i
+//     }
 
-    if (value !== 0) {
-        contenedorHTML.innerHTML += `<p>La suma es ${suma}</p>`
-    }
-}
+//     if (value !== 0) {
+//         contenedorHTML.innerHTML += `<p>La suma es ${suma}</p>`
+//     }
+// }
+
+
+
 
 
 
