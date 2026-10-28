@@ -174,14 +174,89 @@ let columnRightHTML = document.getElementById("right-column")
 
 // Ejercicio 12
 
+// let num = prompt("Dame un número de 3 dígitos:")
+// let suma = 0
 
+// if (num.length == 3) {
+//     for (let i = 0; i < 3; i++) {
+//         suma += parseInt(num[i])
+//     }
+
+//     alert(suma)
+
+// } else {
+//     alert("El número no tiene 3 dígitos")
+// }
 
 
 
 // Ejercicio 13
 
+// let date = prompt("Introduce tu fecha de nacimiento (dd-mm-aaaa):")
+// let dateToSum = date.replaceAll("-", "+")
+// let splitDate = dateToSum.split("+")
+
+// let firstDate = 0
+// let secondDate = 0
+// let luckyNumber = 0
+
+// for (let i = 0; i < splitDate.length; i++) {
+//     firstDate += parseInt(splitDate[i])
+// }
+
+// for (let i = 0; i < firstDate.toString().length; i++) {
+//     secondDate += parseInt(firstDate.toString()[i])
+// }
+
+// for (let i = 0; i < secondDate.toString().length; i++) {
+//     luckyNumber += parseInt(secondDate.toString()[i])
+// }
+
+// alert(`Tu lucky number es el ${luckyNumber}`)
+
+
+
 // Ejercicio 14
+
+// let num = parseInt(prompt("Introduce un número"))
+// let line = ""
+
+// for (i = 1; i <= num; i++) {
+//     line += "*"
+//     console.log(line)
+// }
+
+
 
 // Ejercicio 15
 
+// let password = prompt("Introduce la contraseña")
+// let passwordMinimumLength = password.length >= 8
+// let passwordContentNumbers = ""
+// let passwordContentFirstCapitalLetter = password[0] == password[0].toUpperCase()
 
+
+// for (let i = 0; i <= 9; i++) {
+//     if (password.includes([i])) {
+//         passwordContentNumbers = true        
+//     }
+// }
+
+
+// let passwordCorrect = 
+//     passwordMinimumLength &&
+//     passwordContentNumbers &&
+//     passwordContentFirstCapitalLetter
+
+
+// if (passwordCorrect) {
+//     alert("La contraseña es correcta")
+
+// } else {
+//     alert("La contraseña es incorrecta")
+// }
+
+
+// if (password.length >= 8) {
+
+// }
