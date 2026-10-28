@@ -63,6 +63,50 @@ let contenedorHTML = document.getElementById("ejercicios-bucles")
 
 
 
+// Ejercicio 6
+
+// let columnNumHTML = document.getElementById("number-column")
+// let columnFactorialHTML = document.getElementById("factorial-column")
+
+// let factorial = 1
+
+// for(let i = 1; i <= 10; i++) {
+//     factorial *= i
+//     columnNumHTML.innerHTML += `<p class="number-column-num">Factorial de ${[i]}:</p>`
+//     columnFactorialHTML.innerHTML += `<p class="factorial-column-num">${factorial}</p>`
+// }
+
+
+
+// Ejercicio 7
+
+let num
+let suma = 0
+
+for (let i = 0; num !== 0; i++) {
+    num = parseFloat(prompt("Introduce un número"))
+    suma += num
+    console.log(suma)
+
+    if (num < 0) {
+        alert("Se ignoran los signos negativos")
+        num = num * (-1)
+        suma += num
+        console.log(num)
+
+    }
+}
+
+alert(`La suma es: ${suma}`)
+
+
+
+
+
+
+
+
+
 
 
 
