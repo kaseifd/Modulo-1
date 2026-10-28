@@ -148,7 +148,6 @@
 
 // while (num < 0) {
 //     num = parseInt(prompt("Introduce un número positivo:")) 
-
 // }
 
 // alert(`Tu número tiene ${(numeroCifras(num))} cifras` )
