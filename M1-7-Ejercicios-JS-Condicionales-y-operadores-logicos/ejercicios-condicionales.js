@@ -551,7 +551,7 @@
 
 // let year = parseInt(prompt("Dame un año:"))
 
-// if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+// if (year % 4 == 0 && (year % 100 != 0) || year % 400 == 0) {
 //     alert(`El año ${year} es bisiesto`)
     
 // } else {
