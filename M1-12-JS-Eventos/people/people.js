@@ -13,7 +13,7 @@ function getHTML(id) {
 
 function searchPersonByIndex() {
   let inputValue = getHTML("index-input").value
-  people[inputValue] ? displayCard(people[inputValue]) : error()
+  people[inputValue] ? displayCard(people[inputValue]) : error("Error. El usuario no existe", "search-error")
 
 }
 
@@ -21,30 +21,28 @@ function searchPersonByIndex() {
 // REVISAR ESTA FUNCION PORUQE AUNQUE EL IF SEA TRUE ESTA HACIENDO EL ELSE
 function searchPersonByName() {
   let inputValue = getHTML("index-input").value
+  let foundUser = false
   getHTML("people-container").innerHTML = ``
   
   for (let i = 0; i < people.length; i++) {
     if (people[i].name.toLowerCase().includes(inputValue) ) {
       displayCard(people[i])
-
-      console.log(i)
-      console.log(inputValue)
-      console.log(people[i].name.toLowerCase())
-      console.log(people[i].name.toLowerCase().includes(inputValue))
-      
-      //i = people.length
-    } else {
-      error() 
-      
+      foundUser = true
+      console.log(foundUser)
     }
+  }
+
+  if (!foundUser){
+    error("Error. El usuario no existe", "search-error") 
+          console.log(foundUser)
+
   }
 }
 
 
-function error() {
-  getHTML("people-container").innerHTML = `
-  <p style="color: red">Error. El usuario no existe</p>
-  `
+function error(message, id) {
+  getHTML(id).innerText = message
+
 }
 
 
@@ -65,17 +63,14 @@ function displayCard(person) {
 
 
 
+function searchPerson() {
+  let inputValue = getHTML("index-input").value
 
+  if (parseInt(inputValue)) {
+    searchPersonByIndex()
+    
+  } else {
+    searchPersonByName()
+  }  
 
-
-
-
-
-//Ejercicio 6
-// function searchPerson() {
-//   let inputValue = getHTML("index-input").value
-
-//   searchPersonByIndex()
-//   searchPersonByName()
-
-// }
+}
