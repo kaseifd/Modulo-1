@@ -76,29 +76,32 @@ let contenedorHTML = document.getElementById("ejercicios-arrays")
 
 // Ejercicio 6
 
-// let valuesList = []
-// let value
+let valuesList = []
+let value
 
-// for (let i = 1; i <= 3; i++) {
-//     value = parseInt(prompt("Introduce un número:"))
-//     if (!Number.isNaN(value)) {
-//         valuesList.push(value)
+for (let i = 1; i <= 3; i++) {
+    value = parseInt(prompt("Introduce un número:"))
+            console.log(value)
 
-//     } else {
-//         alert("Tienen que ser números")
-//         i = 1
-//     }
-// }
+    if (value) {
+        valuesList.push(value)
+        console.log(valuesList)
 
-// if (valuesList[0] < valuesList[1] && valuesList[0] < valuesList[2]) {
-//       alert(`${valuesList[0]} es el más pequeño`)  
+    } else {
+        alert("Tienen que ser números")
+        i = i - 1
+    }
+}
 
-// } else if (valuesList[1] < valuesList[0] && valuesList[1] < valuesList[2]){
-//     alert(`${valuesList[1]} es el más pequeño`)
+if (valuesList[0] < valuesList[1] && valuesList[0] < valuesList[2]) {
+      alert(`${valuesList[0]} es el más pequeño`)  
 
-// } else {
-//     alert(`${valuesList[2]} es el más pequeño`)
-// }
+} else if (valuesList[1] < valuesList[0] && valuesList[1] < valuesList[2]){
+    alert(`${valuesList[1]} es el más pequeño`)
+
+} else {
+    alert(`${valuesList[2]} es el más pequeño`)
+}
     
 
 
