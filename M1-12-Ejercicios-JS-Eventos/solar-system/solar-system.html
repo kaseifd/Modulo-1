@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Sistema Solar</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #Ejercicios {
+            text-align: center;
+        }
+
+        #Ejercicios img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Ejercicios"></div>
+    <div>
+        <input id="my-input" type="text">
+        <button onclick="search()">Buscar</button>
+    </div>
+
+    
+    <script src="solar-system-data.js"></script>
+    <script src="solar-system.js"></script>
+</body>
+
+</html>
