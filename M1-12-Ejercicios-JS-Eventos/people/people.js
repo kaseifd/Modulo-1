@@ -1,7 +1,7 @@
 displayCard(people[0])
 
 window.addEventListener("keydown", (event) => {
-  if (event.key == "Enter") searchPersonByIndex()
+  if (event.key == "Enter") searchPerson()
 })
 
 
@@ -13,6 +13,9 @@ function getHTML(id) {
 
 function searchPersonByIndex() {
   let inputValue = getHTML("index-input").value
+  getHTML("people-container").innerHTML = ``
+  getHTML("search-error").innerHTML = ``
+
   people[inputValue] ? displayCard(people[inputValue]) : error("Error. El usuario no existe", "search-error")
 
 }
@@ -23,18 +26,19 @@ function searchPersonByName() {
   let inputValue = getHTML("index-input").value
   let foundUser = false
   getHTML("people-container").innerHTML = ``
-  
+  getHTML("search-error").innerHTML = ``
+
+
   for (let i = 0; i < people.length; i++) {
-    if (people[i].name.toLowerCase().includes(inputValue) ) {
+    if (people[i].name.toLowerCase().includes(inputValue)) {
       displayCard(people[i])
       foundUser = true
       console.log(foundUser)
     }
   }
 
-  if (!foundUser){
-    error("Error. El usuario no existe", "search-error") 
-          console.log(foundUser)
+  if (!foundUser) {
+    error("Error. El usuario no existe", "search-error")
 
   }
 }
@@ -68,9 +72,9 @@ function searchPerson() {
 
   if (parseInt(inputValue)) {
     searchPersonByIndex()
-    
+
   } else {
     searchPersonByName()
-  }  
+  }
 
 }
