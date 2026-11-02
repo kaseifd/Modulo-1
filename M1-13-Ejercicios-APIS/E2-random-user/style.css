@@ -1,9 +1,6 @@
-/* * {
-    border: 1px solid red;
-} */
 body {
     margin: 0;
-    font-family:
+    font-family: 
         system-ui,
         -apple-system,
         BlinkMacSystemFont,
@@ -86,8 +83,7 @@ h2 {
     margin-top: 16px;
     padding: 24px;
     border-radius: 8px;
-        background-color: rgb(243, 243, 243);
-
+    background-color: rgb(243, 243, 243);
 }
 
 p {
