@@ -1,25 +1,16 @@
-let planetsContainer = document.getElementById("planets-container")
+let charactersContainer = document.getElementById("characters-container")
 let planetsDropdown = document.getElementById("planets-dropdown")
+let dropdownValue
 
 let planets = []
 let planetsPages = []
 let pageCounter = 1
 
-// fetch(`https://swapi.dev/api/planets/?page=${pageCounter}`)
-//     .then((response) => { return response.json() })
-//     .then((data) => {
-//         planets = data.results
-//         console.log(planets);
-//         displayDropdown()
-//         console.log(pageCounter);
-
-//     })
+let charactersPages = []
+let characters = []
 
 
-
-
-
-function getData() {
+function getPlanetsData() {
     fetch(`https://swapi.dev/api/planets/?page=${pageCounter}`)
         .then((response) => { return response.json() })
         .then((data) => {
@@ -27,61 +18,64 @@ function getData() {
 
             if (data.next !== null) {
                 pageCounter++
-                getData()
+                getPlanetsData()
+                pagesToArray(planetsPages, planets)
+                
 
             } else {
                 displayDropdown()
-                selectPlanet()
+                pageCounter = 1
 
             }
         })
 }
 
 
-function planetsPagesToPlanets() {
-    for (let j = 0; j < planetsPages.length; j++) {
-        for (let i = 0; i < planetsPages[j].length; i++) {
-            planets.push(planetsPages[j][i])
+
+// function displayCharacters() {
+//     for (let i = 0; i < planets.length; i++) {
+//         charactersContainer.innerHTML += `
+//             <div class="character">
+//                 <h2 class="character-name">${.name}</h2>
+//             </div>
+//             `
+//     }    
+// }
+
+
+function pagesToArray(pagesArray, finalArray) {
+    for (let j = 0; j < pagesArray.length; j++) {
+        for (let i = 0; i < pagesArray[j].length; i++) {
+            finalArray.push(pagesArray[j][i])
         }
     }
 }
 
-let dropdownValue
 function displayDropdown() {
-    planetsPagesToPlanets()
 
     for (let i = 0; i < planets.length; i++) {
         planetsDropdown.innerHTML += `
             <option value="${planets[i].name}">${planets[i].name}</option>
             `
     }
-
-    
-    
 }
 
 
-getData()
-selectPlanet()
-
-
-
-
+getPlanetsData()
 
 
 function selectPlanet() {
     dropdownValue = planetsDropdown.value
     console.log(dropdownValue);
-    for (let i = 0; i < planets.length; i++) {
-        if (dropdownValue == planets[i].name) {
-            console.log("hola");
-
-
-        } else {
-            console.log("error");
-            
-        }
+    if (dropdownValue) {
+        alert(dropdownValue)
 
     }
 
+    getCharactersData()
+}
+
+
+function getCharactersData() {
+    console.log(planets[0].residents)
 }

@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars - Personajes</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <select name="planets" id="planets-dropdown">
+    <select name="planets" id="planets-dropdown" onchange="selectPlanet()">
         <option value="">Selecciona un planeta</option>
+        <!-- <option value="planeta1">planeta</option> -->
     </select>
 
-    <div id="planets-container">
-
+    <div id="characters-container">
+        <!-- <div class="character">
+            <h2 class="character-name">${name}</h2>
+        </div> -->
     </div>
-    <script type="module" src="star-wars.js"></script>
+    <script src="star-wars.js"></script>
 </body>
+
 </html>
