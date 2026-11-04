@@ -6,8 +6,16 @@
     <title>Pokemon</title>
 </head>
 <body>
-    <select name="" id="dropdown">
+    <select name="" id="dropdown" onchange="getPokemonsByType()">
+        <option value="">Pokemon Type</option>
     </select>
+
+    <div id="pokemons-container">
+        <!-- <div class="pokemon-card">
+            <h2></h2>
+        </div> -->
+    </div>
+
     <script src="pokemon.js"></script>
 </body>
 </html>
