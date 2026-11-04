@@ -9,39 +9,25 @@ let pageCounter = 1
 let charactersPages = []
 let characters = []
 
+getPlanetsData()
 
 function getPlanetsData() {
     fetch(`https://swapi.dev/api/planets/?page=${pageCounter}`)
-        .then((response) => { return response.json() })
+        .then((response) => {return response.json()})
         .then((data) => {
             planetsPages.push(data.results)
 
             if (data.next !== null) {
                 pageCounter++
-                getPlanetsData()
-                 
+                getPlanetsData()   
 
             } else { 
                 pagesToArray(planetsPages, planets)
                 displayDropdown()
-                // pageCounter = 1
-
+                pageCounter = 1
             }
         })
 }
-
-
-
-// function displayCharacters() {
-//     for (let i = 0; i < planets.length; i++) {
-//         residentsContainer.innerHTML += `
-//             <div class="character">
-//                 <h2 class="character-name">${.name}</h2>
-//             </div>
-//             `
-//     }    
-// }
-
 
 function pagesToArray(pagesArray, finalArray) {
     for (let j = 0; j < pagesArray.length; j++) {
@@ -60,21 +46,24 @@ function displayDropdown() {
     }
 }
 
-
-getPlanetsData()
-
-
 function selectPlanet() {
     let planetIndex = planetsDropdown.value
-    console.log(planets[planetIndex]);
-
     let selectedPlanet = planets[planetIndex]
+    
+    residentsContainer.innerHTML = ""
+
+    selectedPlanet.residents.forEach(residentUrl => {
+        fetch(residentUrl).then(res => res.json().then(data => {
+            displayResident(data)
+        }))
+    });
 
 }
 
-
-function displayResidents(residents) {
-    residents.forEach(residents => {
-        planetsDropdown.innerHTML += 
-    });
+function displayResident(resident) {
+    residentsContainer.innerHTML += `
+    <div class="resident-card">
+        <h2 class="resident-name">${resident.name}</h2>
+    </div>
+    `
 }
