@@ -1,4 +1,4 @@
-let charactersContainer = document.getElementById("characters-container")
+let residentsContainer = document.getElementById("residents-container")
 let planetsDropdown = document.getElementById("planets-dropdown")
 let dropdownValue
 
@@ -19,12 +19,12 @@ function getPlanetsData() {
             if (data.next !== null) {
                 pageCounter++
                 getPlanetsData()
-                pagesToArray(planetsPages, planets)
-                
+                 
 
-            } else {
+            } else { 
+                pagesToArray(planetsPages, planets)
                 displayDropdown()
-                pageCounter = 1
+                // pageCounter = 1
 
             }
         })
@@ -34,7 +34,7 @@ function getPlanetsData() {
 
 // function displayCharacters() {
 //     for (let i = 0; i < planets.length; i++) {
-//         charactersContainer.innerHTML += `
+//         residentsContainer.innerHTML += `
 //             <div class="character">
 //                 <h2 class="character-name">${.name}</h2>
 //             </div>
@@ -55,7 +55,7 @@ function displayDropdown() {
 
     for (let i = 0; i < planets.length; i++) {
         planetsDropdown.innerHTML += `
-            <option value="${planets[i].name}">${planets[i].name}</option>
+            <option value="${i}">${planets[i].name}</option>
             `
     }
 }
@@ -65,17 +65,16 @@ getPlanetsData()
 
 
 function selectPlanet() {
-    dropdownValue = planetsDropdown.value
-    console.log(dropdownValue);
-    if (dropdownValue) {
-        alert(dropdownValue)
+    let planetIndex = planetsDropdown.value
+    console.log(planets[planetIndex]);
 
-    }
+    let selectedPlanet = planets[planetIndex]
 
-    getCharactersData()
 }
 
 
-function getCharactersData() {
-    console.log(planets[0].residents)
+function displayResidents(residents) {
+    residents.forEach(residents => {
+        planetsDropdown.innerHTML += 
+    });
 }
